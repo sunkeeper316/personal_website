@@ -9,7 +9,7 @@
     "deploy": "gh-pages -d dist",
     "preview": "vite preview"
   },
-  "homepage": "https://<USERNAME>.github.io/my-portfolio",
+  "homepage": "https://sunkeeper316.github.io/personal_website",
   "dependencies": {
     "vue": "^3.4.31",
     "vue-router": "^4.0.13"
