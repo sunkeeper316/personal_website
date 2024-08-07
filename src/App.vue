@@ -1,21 +1,26 @@
 <template>
-  <div class="app">
-    <div class="main-content">
-      <aside class="sidebar">
-        <nav-component></nav-component>
-      </aside>
-      <main class="main">
-        <div class="container">
-        <p class="text-title">全端工程師</p>
-        <h2 class="text-xl mt-8">Welcome to My Portfolio</h2>
-        <h2 class="text-xl mt-8">Welcome to My Portfolio</h2>
-        <h2 class="text-xl mt-8">Welcome to My Portfolio</h2>
-        <h2 class="text-xl mt-8">Welcome to My Portfolio</h2>
-        <h2 class="text-xl mt-8">Welcome to My Portfolio</h2>
-        <!-- Add more content here -->
+  <div id="app" class="app flex min-h-screen w-full">
+    <aside class="w-1/2 text-white p-4">
+        <h2 class="text-2xl">黃德桑</h2>
+        <p>Cross-Platform Mobile Developer</p>
+        <p>總年資 | 4 年</p>
+        <p class="text-customGray">偉盟系統股份有限公司 | ios app開發工程師</p>
+        <p class="text-customGray">興國管理學院 |資訊管理學系 大學畢業</p>
+    </aside>
+    <main class="w-1/2 p-4 overflow-y-auto">
+        <div class="container mx-auto p-4">
+          <h2 class="text-2xl font-bold">Home Page</h2>
+          <p>我出生在嘉義市，那裡感覺就像一個大家庭，鄰里友好。
+              之前，我在新竹科學園區的一家名為廣歡科技的公司擔任操作員。 由於薪酬豐厚，我在那裡待了 5 年，但當公司不得不對其運營做出重大決策時，情況發生了變化，導致裁員，不幸的是，我也是其中之一。
+              面對裁員的現實，我藉此機會重新審視了我在大學學習期間培養的對程式設計的熱情。 通過朋友的介紹，我發現了資策會，決定參加他們的App開發班。 通過自學和專業訓練，我有幸在程式設計方面取得了長足的進步，甚至成為了一個小組的組長，幫助同學們克服挑戰。 在這段學習期間，我能夠綜合各種技能，完成各種項目。 畢業後，我有機會和同學一起做一個專題，學到了很多專業知識。
+              我目前有超過 3 年的 App 工程師經驗。 由於公司要求，本人精通Android和iOS開發。 我從事的產品需要集成藍牙和WiFi，因此我也實現了很多物聯網 (IoT) 開發技術。 除了公司發布的應用程序，我還需要為客戶開發庫，作為產品的一部分。 過去的三年讓我學到了比在學校學到的更多的東西，我覺得自己的技能有了很大的提高。
+              此外，我也利用空閒時間做side projects，以更快地提高自己的技能。 我大部分時間都花在學習程式技術上。 目前，我能夠處理任何具有官方文檔的技術。 除了應用程序開發，我還增加了使用 Nodejs 和 MySQL 進行後端開發的知識。
+              還學習了跨平台App開發的Flutter框架，可以為個人項目節省很多時間，對以後的合作也有好處。
+              除了學習技術，我還喜歡利用空閒時間去戶外，爬山和健身，這些都是我現在最喜歡的活動。 它們可以增強我的身
+              心，這將有助於我的工作。 作為一名軟體工程師，我在這個領域感覺很舒服，也很自信，希望以後能在這個領域更上一層樓，能夠解決各種問題，為公司做出更好的項目。</p>
+          
         </div>
-      </main>
-    </div>
+    </main>
   </div>
 </template>
 
@@ -24,35 +29,10 @@
 
 <style scoped>
 .app {
-  display: flex;
-  flex-direction: column;
+  display: flex ;
   min-height: 100vh;
-  background-color: #f8f9fa;
+  background-color: #111729;
+  width: 100%;
 }
 
-.main-content {
-  display: flex;
-  flex: 1;
-  overflow: hidden;
-}
-
-.sidebar {
-  width: 250px;
-  background-color: #2c3e50;
-  overflow-y: auto;
-}
-
-.main {
-  flex: 1;
-  background-color: #ecf0f1;
-  overflow-y: auto;
-  padding: 20px;
-}
-
-.header-component {
-  flex-shrink: 0;
-}
-.footer-component {
-  flex-shrink: 0;
-}
 </style>
