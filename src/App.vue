@@ -1,40 +1,41 @@
 <template>
-  <div id="app" class="app flex ">
-    <div class="min-h-screen w-1/2 text-white p-8 flex flex-col justify-center items-start ">
-      <h1 class="text-5xl font-bold mb-2">Brittany Chiang</h1>
-      <h2 class="text-2xl">黃德桑</h2>
-      <p>Cross-Platform Mobile Developer</p>
-      <p>總年資 | 4 年</p>
-      <p class="text-customGray">偉盟系統股份有限公司 | ios app開發工程師</p>
-      <p class="text-customGray">興國管理學院 |資訊管理學系 大學畢業</p>
-      <nav class="flex flex-col space-y-4">
-        <a href="#" class="text-gray-400 hover:text-white transition">ABOUT</a>
-        <a href="#" class="text-gray-400 hover:text-white transition">EXPERIENCE</a>
-        <a href="#" class="text-gray-400 hover:text-white transition">PROJECTS</a>
-      </nav>
+  <div class="app">
+    <div class="item-1 flex flex-col">
+      <div class="flex flex-col grow  text-white">
+        <h1 class="text-5xl font-bold mb-2">Brittany Chiang</h1>
+        <h2 class="text-2xl">黃德桑</h2>
+        <p>Cross-Platform Mobile Developer</p>
+        <p>總年資 | 4 年</p>
+        <p class="text-customGray">偉盟系統股份有限公司 | ios app開發工程師</p>
+        <p class="text-customGray">興國管理學院 |資訊管理學系 大學畢業</p>
+        <nav class="flex flex-col space-y-4 mt-20">
+          <a href="#" class="text-gray-400 hover:text-white transition">ABOUT</a>
+          <a href="#" class="text-gray-400 hover:text-white transition">EXPERIENCE</a>
+          <a href="#" class="text-gray-400 hover:text-white transition">PROJECTS</a>
+        </nav>
+      </div>
       <!-- 社交媒体图标 -->
       <div class="flex space-x-4 mt-10">
         <a href="#" class="text-gray-400 hover:text-blue-600">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="transition duration-300 ease-in-out"
-          >
-            <path
-              d="M12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 16.42 4.87 20.17 8.84 21.5C9.34 21.58 9.5 21.27 9.5 21V19.31C6.73 19.91 6.14 17.97 6.14 17.97C5.68 16.81 5.03 16.5 5.03 16.5C4.12 15.88 5.1 15.9 5.1 15.9C6.1 15.97 6.63 16.93 6.63 16.93C7.5 18.45 8.97 18 9.54 17.76C9.63 17.11 9.89 16.67 10.17 16.42C7.95 16.17 5.62 15.31 5.62 11.5C5.62 10.39 6 9.5 6.65 8.79C6.55 8.54 6.2 7.5 6.75 6.15C6.75 6.15 7.59 5.88 9.5 7.17C10.29 6.95 11.15 6.84 12 6.84C12.85 6.84 13.71 6.95 14.5 7.17C16.41 5.88 17.25 6.15 17.25 6.15C17.8 7.5 17.45 8.54 17.35 8.79C18 9.5 18.38 10.39 18.38 11.5C18.38 15.32 16.04 16.16 13.81 16.41C14.17 16.72 14.5 17.33 14.5 18.26V21C14.5 21.27 14.66 21.59 15.17 21.5C19.14 20.16 22 16.42 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2Z"
-              fill="currentColor"
-            />
-          </svg>
+          <img src="./assets/img/icon/github.svg" alt="Icon description">
         </a>
-        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
-        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+
+        <a href="#" class="text-gray-400 hover:text-blue-600">
+          <img src="./assets/img/icon/linkedIn.svg" alt="Icon description">
+        </a>
+
+        <a href="#" class="text-gray-400 hover:text-blue-600">
+          <img src="./assets/img/icon/phone.svg" alt="Icon description">
+        </a>
+        
+        <a href="#" class="text-gray-400 hover:text-blue-600">
+          <img src="./assets/img/icon/email.svg" alt="Icon description">
+        </a>
       </div>
     </div>
-    <main class="w-1/2 p-4 overflow-y-auto">
+    <div class="item-2">
+    </div>
+    <main class="item-3">
         <div class="container mx-auto p-4  text-white">
           <h2 class="text-2xl font-bold">Home Page</h2>
           <p>我出生在嘉義市，那裡感覺就像一個大家庭，鄰里友好。
@@ -56,10 +57,13 @@
 
 <style scoped>
 .app {
-  display: flex ;
+  display: grid ;
   min-height: 100vh;
   background-color: #111729;
+  grid-template-columns: 4fr 1fr 7fr;
   width: 100%;
+  gap: 20px;
+  padding: 80px;
 }
 
 </style>
