@@ -35,7 +35,7 @@
     </div>
     <div class="item-2">
     </div>
-    <main class="item-3 flex-1 overflow-y-auto">
+    <main class="item-3">
         <div class="container mx-auto p-4  text-white">
           <h2 class="text-2xl font-bold">Home Page</h2>
           <p>我出生在嘉義市，那裡感覺就像一個大家庭，鄰里友好。
@@ -139,12 +139,20 @@
   min-height: 100vh;
   background-color: #111729;
   grid-template-columns: 4fr 1fr 7fr;
+  grid-template-rows: 1fr;
   width: 100%;
   
-  gap: 20px;
-  padding: 80px;
+  gap: 10px;
 }
 .badge {
     @apply bg-teal-800 text-teal-300 text-xs font-semibold px-3 py-1 rounded-full;
-  }
+}
+.item-1 {
+  padding: 80px;
+}
+.item-3 {
+  overflow-y: auto;
+
+  padding: 80px;
+}
 </style>
