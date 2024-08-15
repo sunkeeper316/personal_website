@@ -48,11 +48,87 @@
               心，這將有助於我的工作。 作為一名軟體工程師，我在這個領域感覺很舒服，也很自信，希望以後能在這個領域更上一層樓，能夠解決各種問題，為公司做出更好的項目。</p>
           
         </div>
+
+        <div class="experience-list mt-20">
+          <!-- 第一个工作经历 -->
+          <div class="experience-item mb-8">
+            <div class="flex items-start space-x-4">
+              <div class="text-gray-400 text-sm">2023.04 — PRESENT</div>
+              <div>
+                <h3 class="text-white text-lg font-semibold">ios app開發工程師 · 偉盟系統股份有限公司</h3>
+                <p class="text-gray-400 text-sm mt-2">幫助公司開發電商App 包含flutter app的 iOS 及原生swift iOS app</p>
+                <div class="flex space-x-2 mt-2">
+                  <span class="badge">iOS</span>
+                  <span class="badge">SWIFT</span>
+                  <span class="badge">Flutter</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 第二个工作经历 -->
+          <div class="experience-item mb-8">
+            <div class="flex items-start space-x-4">
+              <div class="text-gray-400 text-sm">2023.03 — 2023.04</div>
+              <div>
+                <h3 class="text-white text-lg font-semibold">ios engineer · 艾酷互動股份有限公司</h3>
+                <p class="text-gray-400 text-sm mt-2">在這家公司，您从事了某些工作或项目...</p>
+                <div class="flex space-x-2 mt-2">
+                  <span class="badge">iOS</span>
+                  <span class="badge">SWIFT</span>
+                  <span class="badge">Flutter</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 第三个工作经历 -->
+          <div class="experience-item mb-8">
+            <div class="flex items-start space-x-4">
+              <div class="text-gray-400 text-sm">2022.01 — 2023.02</div>
+              <div>
+                <h3 class="text-white text-lg font-semibold">Software Developer · 另一家公司</h3>
+                <p class="text-gray-400 text-sm mt-2">描述您在这段时间内的职责或项目...</p>
+                <div class="flex space-x-2 mt-2">
+                  <span class="badge">JavaScript</span>
+                  <span class="badge">React</span>
+                  <span class="badge">Node.js</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-item flex space-x-4 bg-gray-800 p-4 rounded-lg mb-8">
+          <img src="assets/img/icon/your-image.svg" alt="Project Image" class="w-24 h-24 rounded-md">
+          <div>
+              <h3 class="text-white text-lg font-semibold">CaCa Taxi</h3>
+              <p class="text-gray-400 text-sm">2023.08 — 2024.02</p>
+              <p class="text-gray-400 text-sm mt-2">
+                  和團隊一起完成的叫車App，負責的部分是flutter App 雙平台，配合後端串接API，google地圖，還有司機端CaCa Driver 是兩個互相配合串接的App，類似Uber，持續維護中。
+              </p>
+              <div class="flex space-x-2 mt-2">
+                  <span class="badge">Flutter</span>
+                  <span class="badge">google地圖</span>
+                  <span class="badge">API</span>
+              </div>
+          </div>
+          <div class="ml-auto">
+              <a href="#" class="text-gray-400 hover:text-white transition flex items-center">
+                  前往查看
+                  <svg class="w-4 h-4 ml-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path d="M10.5 17l6-6-6-6v12z"></path>
+                  </svg>
+              </a>
+          </div>
+      </div>
+
     </main>
   </div>
 </template>
 
 <script setup>
+
 </script>
 
 <style scoped>
@@ -65,5 +141,7 @@
   gap: 20px;
   padding: 80px;
 }
-
+.badge {
+    @apply bg-teal-800 text-teal-300 text-xs font-semibold px-3 py-1 rounded-full;
+  }
 </style>
