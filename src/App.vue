@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="app h-screen">
     <div class="item-1 flex flex-col">
       <div class="flex flex-col grow  text-white">
         <h1 class="text-5xl font-bold mb-2">Brittany Chiang</h1>
@@ -35,7 +35,7 @@
     </div>
     <div class="item-2">
     </div>
-    <main class="item-3">
+    <main class="item-3 flex-1 overflow-y-auto">
         <div class="container mx-auto p-4  text-white">
           <h2 class="text-2xl font-bold">Home Page</h2>
           <p>我出生在嘉義市，那裡感覺就像一個大家庭，鄰里友好。
@@ -99,7 +99,8 @@
           </div>
         </div>
 
-        <div class="experience-item flex space-x-4 bg-gray-800 p-4 rounded-lg mb-8">
+        <div class="experience-list mt-20">
+          <div class="experience-item flex space-x-4 bg-gray-800 p-4 rounded-lg mb-8">
           <img src="./assets/img/image/ocare.png" alt="Project Image" class="w-24 h-24 rounded-md">
           <div>
               <h3 class="text-white text-lg font-semibold">CaCa Taxi</h3>
@@ -121,6 +122,7 @@
                   </svg>
               </a>
           </div>
+        </div>
       </div>
 
     </main>
@@ -138,6 +140,7 @@
   background-color: #111729;
   grid-template-columns: 4fr 1fr 7fr;
   width: 100%;
+  
   gap: 20px;
   padding: 80px;
 }
