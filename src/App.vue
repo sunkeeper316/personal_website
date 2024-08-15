@@ -100,7 +100,7 @@
         </div>
 
         <div class="experience-item flex space-x-4 bg-gray-800 p-4 rounded-lg mb-8">
-          <img src="assets/img/icon/your-image.svg" alt="Project Image" class="w-24 h-24 rounded-md">
+          <img src="./assets/img/image/ocare.png" alt="Project Image" class="w-24 h-24 rounded-md">
           <div>
               <h3 class="text-white text-lg font-semibold">CaCa Taxi</h3>
               <p class="text-gray-400 text-sm">2023.08 — 2024.02</p>
