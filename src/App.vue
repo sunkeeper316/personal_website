@@ -16,19 +16,19 @@
       </div>
       <!-- 社交媒体图标 -->
       <div class="flex space-x-4 mt-10">
-        <a href="#" class="text-gray-400 hover:text-blue-600">
+        <a href="https://github.com/sunkeeper316" class="text-gray-400 hover:text-blue-600">
           <img src="./assets/img/icon/github.svg" alt="Icon description">
         </a>
 
-        <a href="#" class="text-gray-400 hover:text-blue-600">
+        <a href="https://www.linkedin.com/in/%E5%BE%B7%E6%A1%91-%E9%BB%83-012537183/" class="text-gray-400 hover:text-blue-600" @click="sendProfileEvent('phone')">
           <img src="./assets/img/icon/linkedIn.svg" alt="Icon description">
         </a>
 
-        <a href="#" class="text-gray-400 hover:text-blue-600">
+        <a href="tel:+886922321678" class="text-gray-400 hover:text-blue-600 tel-block">
           <img src="./assets/img/icon/phone.svg" alt="Icon description">
         </a>
         
-        <a href="#" class="text-gray-400 hover:text-blue-600">
+        <a href="mailto:sunkeeper316@gmail.com" class="text-gray-400 hover:text-blue-600">
           <img src="./assets/img/icon/email.svg" alt="Icon description">
         </a>
       </div>
@@ -97,6 +97,22 @@
               </div>
             </div>
           </div>
+
+          <!-- 第四个工作经历 -->
+          <div class="experience-item mb-8">
+            <div class="flex items-start space-x-4">
+              <div class="text-gray-400 text-sm">2022.01 — 2023.02</div>
+              <div>
+                <h3 class="text-white text-lg font-semibold">Software Developer · 另一家公司</h3>
+                <p class="text-gray-400 text-sm mt-2">描述您在这段时间内的职责或项目...</p>
+                <div class="flex space-x-2 mt-2">
+                  <span class="badge">JavaScript</span>
+                  <span class="badge">React</span>
+                  <span class="badge">Node.js</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="experience-list mt-20">
@@ -113,15 +129,16 @@
                   <span class="badge">google地圖</span>
                   <span class="badge">API</span>
               </div>
-          </div>
-          <div class="ml-auto">
-              <a href="#" class="text-gray-400 hover:text-white transition flex items-center">
+              <div class="ml-auto">
+              <a href="#" class="text-right text-white hover:text-gray-400 transition flex items-center mt-4">
                   前往查看
                   <svg class="w-4 h-4 ml-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                       <path d="M10.5 17l6-6-6-6v12z"></path>
                   </svg>
               </a>
+              </div>
           </div>
+          
         </div>
       </div>
 
@@ -130,7 +147,13 @@
 </template>
 
 <script setup>
-
+// GA4 自訂事件 - 點擊個人資料事件
+const sendProfileEvent = (item) => {
+  gtag('event', 'custom_profileInfo_click', {
+    'custom_event_category': 'profileInfo',
+    'custom_event_label': item
+  });
+};
 </script>
 
 <style scoped>
@@ -152,7 +175,24 @@
 }
 .item-3 {
   overflow-y: auto;
-
   padding: 80px;
+}
+
+.tel-block {
+  @apply relative inline-block;
+}
+
+.tel-block::after {
+  @apply absolute -bottom-[36px] hidden text-white text-[14px] px-3 py-1 rounded-sm;
+  content: '聯絡電話 +886922-321-678';
+  white-space: nowrap;
+  transition: opacity 0.3s;
+  background-color: #105ce8;
+  left: 50%; /* 使伪元素的左边缘位于父元素的50% */
+  transform: translateX(-50%); /* 将伪元素向左移动它自身宽度的一半，实现居中 */
+}
+
+.tel-block:hover::after {
+  @apply block;
 }
 </style>
