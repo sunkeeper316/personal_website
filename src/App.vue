@@ -9,9 +9,9 @@
         <p class="text-customGray">偉盟系統股份有限公司 | ios app開發工程師</p>
         <p class="text-customGray">興國管理學院 |資訊管理學系 大學畢業</p>
         <nav class="flex flex-col space-y-4 mt-20">
-          <a href="#" class="text-gray-400 hover:text-white transition">ABOUT</a>
-          <a href="#" class="text-gray-400 hover:text-white transition">EXPERIENCE</a>
-          <a href="#" class="text-gray-400 hover:text-white transition">PROJECTS</a>
+          <a href="#" class="nav-link text-gray-400 hover:text-white transition">ABOUT</a>
+          <a href="#" class="nav-link text-gray-400 hover:text-white transition">EXPERIENCE</a>
+          <a href="#" class="nav-link">PROJECTS</a>
         </nav>
       </div>
       <!-- 社交媒体图标 -->
@@ -139,6 +139,30 @@
                 </div>
             </div>
           </div>
+
+          <div class="experience-item flex space-x-4 bg-gray-800 p-4 rounded-lg mb-8"> 
+            <img src="./assets/img/image/ocare.png" alt="Project Image" class="w-24 h-24 rounded-md">
+            <div>
+                <h3 class="text-white text-lg font-semibold">CaCa Taxi</h3>
+                <p class="text-gray-400 text-sm">2023.08 — 2024.02</p>
+                <p class="text-gray-400 text-sm mt-2">
+                    和團隊一起完成的叫車App，負責的部分是flutter App 雙平台，配合後端串接API，google地圖，還有司機端CaCa Driver 是兩個互相配合串接的App，類似Uber，持續維護中。
+                </p>
+                <div class="flex space-x-2 mt-2">
+                    <span class="badge">Flutter</span>
+                    <span class="badge">google地圖</span>
+                    <span class="badge">API</span>
+                </div>
+                <div class="flex mt-4">
+                  <a href="#" class="ml-auto text-right text-white hover:text-gray-400 transition flex items-center ">
+                      前往查看
+                      <svg class="w-4 h-4 ml-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <path d="M10.5 17l6-6-6-6v12z"></path>
+                      </svg>
+                  </a>
+                </div>
+            </div>
+          </div>
         </div>
 
     </main>
@@ -194,4 +218,40 @@ const sendProfileEvent = (item) => {
 .tel-block:hover::after {
   @apply block;
 }
+.nav-link {
+    position: relative;
+    padding: 10px 20px;
+    color: #FFFFFF; /* 按鈕文字顏色 */
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    padding-left: 30px; /* 增加文字與橫線之間的距離 */
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    padding-left: 30px; /* 增加文字與橫線之間的距離 */
+    left: 15px; /* 改變 left 位置以保持文字距離 */
+    color: #FFFFFF; /* 游標移過去時顏色變為白色 */
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px; /* 橫線的長度 */
+    height: 1px; /* 橫線的高度 */
+    background-color: #9CA3AF; /* 初始橫線顏色 */
+    transition: background-color 0.3s ease; /* 平滑的顏色變化 */
+}
+
+.nav-link:hover::before {
+    width: 30px; /* 游標移過去時橫線變長 */
+    background-color: #FFFFFF; /* 游標移過去時橫線變為白色 */
+}
+
+
+
 </style>
