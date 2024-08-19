@@ -9,9 +9,9 @@
         <p class="text-customGray">偉盟系統股份有限公司 | ios app開發工程師</p>
         <p class="text-customGray">興國管理學院 |資訊管理學系 大學畢業</p>
         <nav class="flex flex-col space-y-4 mt-20">
-          <a href="#" class="nav-link text-gray-400 hover:text-white transition">ABOUT</a>
-          <a href="#" class="nav-link text-gray-400 hover:text-white transition">EXPERIENCE</a>
-          <a href="#" class="nav-link">PROJECTS</a>
+          <a href="#" class="nav-link" @click="scrollToSection('about')">ABOUT</a>
+          <a href="#" class="nav-link" @click="scrollToSection('experience')">EXPERIENCE</a>
+          <a href="#" class="nav-link" @click="scrollToSection('projects')">PROJECTS</a>
         </nav>
       </div>
       <!-- 社交媒体图标 -->
@@ -36,7 +36,7 @@
     <div class="item-2">
     </div>
     <main class="item-3">
-        <div class="container mx-auto p-4  text-white">
+        <div id="about" class="container mx-auto p-4  text-white">
           <h2 class="text-2xl font-bold">Home Page</h2>
           <p>我出生在嘉義市，那裡感覺就像一個大家庭，鄰里友好。
               之前，我在新竹科學園區的一家名為廣歡科技的公司擔任操作員。 由於薪酬豐厚，我在那裡待了 5 年，但當公司不得不對其運營做出重大決策時，情況發生了變化，導致裁員，不幸的是，我也是其中之一。
@@ -49,7 +49,7 @@
           
         </div>
 
-        <div class="experience-list mt-20">
+        <div id="experience" class="experience-list mt-20">
           <!-- 第一个工作经历 -->
           <div class="experience-item mb-8">
             <div class="flex items-start space-x-4">
@@ -115,7 +115,7 @@
           </div>
         </div>
 
-        <div class="experience-list mt-20">
+        <div id="projects" class="experience-list mt-20">
           <div class="experience-item flex space-x-4 bg-gray-800 p-4 rounded-lg mb-8"> 
             <img src="./assets/img/image/ocare.png" alt="Project Image" class="w-24 h-24 rounded-md">
             <div>
@@ -177,6 +177,12 @@ const sendProfileEvent = (item) => {
     'custom_event_label': item
   });
 };
+
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: 'smooth' ,top: 50,});
+
+}
 </script>
 
 <style scoped>
