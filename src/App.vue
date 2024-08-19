@@ -221,17 +221,16 @@ const sendProfileEvent = (item) => {
 .nav-link {
     position: relative;
     padding: 10px 20px;
-    color: #FFFFFF; /* 按鈕文字顏色 */
+    color: #9CA3AF; /* 按鈕文字顏色 */
     border: none;
     cursor: pointer;
     overflow: hidden;
-    padding-left: 30px; /* 增加文字與橫線之間的距離 */
+    padding-left: 45px; /* 增加文字與橫線之間的距離 */
     transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-    padding-left: 30px; /* 增加文字與橫線之間的距離 */
-    left: 15px; /* 改變 left 位置以保持文字距離 */
+    padding-left: 75px; /* 增加文字與橫線之間的距離 */
     color: #FFFFFF; /* 游標移過去時顏色變為白色 */
 }
 
@@ -241,14 +240,14 @@ const sendProfileEvent = (item) => {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 15px; /* 橫線的長度 */
+    width: 30px; /* 橫線的長度 */
     height: 1px; /* 橫線的高度 */
     background-color: #9CA3AF; /* 初始橫線顏色 */
     transition: background-color 0.3s ease; /* 平滑的顏色變化 */
 }
 
 .nav-link:hover::before {
-    width: 30px; /* 游標移過去時橫線變長 */
+    width: 60px; /* 游標移過去時橫線變長 */
     background-color: #FFFFFF; /* 游標移過去時橫線變為白色 */
 }
 
