@@ -1,7 +1,7 @@
 <template>
   <div class="experience-item flex space-x-4 bg-gray-800 p-4 rounded-lg mb-8">
     <img
-      src=""
+      :src="resolvedSrc"
       alt="Project Image"
       class="w-24 h-24 rounded-md"
     />
@@ -49,6 +49,12 @@ export default {
     content: {
       type: String,
       required: true
+    },
+    computed: {
+    resolvedSrc() {
+      // 确保路径能够正确解析
+      return require(`${this.src}`);
+    }
     }
   }
 }
