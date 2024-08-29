@@ -1,7 +1,7 @@
 <template>
   <div class="experience-item flex space-x-4 bg-gray-800 p-4 rounded-lg mb-8">
     <img
-      :src="resolvedSrc"
+      :src="imgurl"
       alt="Project Image"
       class="w-24 h-24 rounded-md"
     />
@@ -36,12 +36,20 @@
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.badge {
+    @apply bg-teal-800 text-teal-300 text-xs font-semibold px-3 py-1 rounded-full;
+}
+</style>
 
 <script>
 export default {
   name: 'ClickableLabel',
   props: {
+    url: {
+      type: String,
+      required: true
+    },
     title: {
       type: String,
       required: true
@@ -50,12 +58,13 @@ export default {
       type: String,
       required: true
     },
-    computed: {
-    resolvedSrc() {
-      // 确保路径能够正确解析
-      return require(`${this.src}`);
-    }
-    }
+
+    },
+    data() {
+    return {
+      imgurl: url // 确保路径正确
+    };
   }
-}
+  }
+
 </script>
