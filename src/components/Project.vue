@@ -10,9 +10,11 @@
       <p class="text-gray-400 text-sm">{{datetime}}</p>
       <p class="text-gray-400 text-sm mt-2">{{content}}</p>
       <div class="flex space-x-2 mt-2">
-        <span class="badge">Flutter</span>
-        <span class="badge">google地圖</span>
-        <span class="badge">API</span>
+        <div class="flex space-x-2 mt-2">
+        <span v-for="(badge, index) in badges" :key="index" class="badge">
+          {{ badge }}
+        </span>
+      </div>
       </div>
       <div class="flex mt-4">
         <a
@@ -41,7 +43,6 @@
 </style>
 
 <script>
-import imageUrl from '../assets/img/image/ocare.png';
 export default {
   name: 'ClickableLabel',
   props: {
@@ -61,17 +62,19 @@ export default {
       type: String,
       required: true
     },
+    badges: {
+      type: Array,
+      required: true
+    },
 
   },
     data() {
-      console.log(this.url);  
-      console.log(imageUrl);  
       return {
         imgurl: this.url // 确保路径正确
       };
     },
     mounted() {
-      console.log(this.imgurl);  // 打印路徑
+      //console.log(this.url);  // 打印路徑
     }
 }
 </script>
