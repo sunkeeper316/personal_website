@@ -1,16 +1,14 @@
 <template>
   <div class="experience-item flex space-x-4 bg-gray-800 p-4 rounded-lg mb-8">
     <img
-      :src="imgurl"
+      v-bind:src=imgurl
       alt="Project Image"
       class="w-24 h-24 rounded-md"
     />
     <div>
       <h3 class="text-white text-lg font-semibold">{{title}}</h3>
-      <p class="text-gray-400 text-sm">2023.08 — 2024.02</p>
-      <p class="text-gray-400 text-sm mt-2">
-        {{content}}
-      </p>
+      <p class="text-gray-400 text-sm">{{datetime}}</p>
+      <p class="text-gray-400 text-sm mt-2">{{content}}</p>
       <div class="flex space-x-2 mt-2">
         <span class="badge">Flutter</span>
         <span class="badge">google地圖</span>
@@ -43,6 +41,7 @@
 </style>
 
 <script>
+import imageUrl from '../assets/img/image/ocare.png';
 export default {
   name: 'ClickableLabel',
   props: {
@@ -54,17 +53,25 @@ export default {
       type: String,
       required: true
     },
+    datetime: {
+      type: String,
+      required: true
+    },
     content: {
       type: String,
       required: true
     },
 
-    },
+  },
     data() {
-    return {
-      imgurl: url // 确保路径正确
-    };
-  }
-  }
-
+      console.log(this.url);  
+      console.log(imageUrl);  
+      return {
+        imgurl: this.url // 确保路径正确
+      };
+    },
+    mounted() {
+      console.log(this.imgurl);  // 打印路徑
+    }
+}
 </script>

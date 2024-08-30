@@ -163,7 +163,7 @@
                 </div>
             </div>
           </div>
-          <Project url="../assets/img/image/ocare.png" title="點擊這裡打開連結" content="和團隊一起完成的叫車App，負責的部分是flutter App 雙平台，配合後端串接API，google地圖，還有司機端CaCa Driver 是兩個互相配合串接的App，類似Uber，持續維護中。"/>
+          <Project url="/personal_website/src/assets/img/image/ocare.png" title="點擊這裡打開連結" datetime="2023.08 — 2024.02" content="和團隊一起完成的叫車App，負責的部分是flutter App 雙平台，配合後端串接API，google地圖，還有司機端CaCa Driver 是兩個互相配合串接的App，類似Uber，持續維護中。"/>
         </div>
 
     </main>
