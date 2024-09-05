@@ -1,6 +1,6 @@
 [
     {
-        "img":"/personal_website/src/assets/img/image/ocare.png",
+        "img":"./assets/img/image/ocare.png",
         "url":"https://apps.apple.com/us/app/ocare-body-composition-app/id1508430987",
         "title":"Ocare",
         "datetime":"2020.04 — 2020.08",
@@ -8,7 +8,7 @@
         "badges": ["iOS","SWift","API","Bluetooth"]
     },
     {
-        "img":"/personal_website/src/assets/img/image/connect.png",
+        "img":"./src/assets/img/image/connect.png",
         "url":"https://apps.apple.com/us/app/charder-connect/id1593812265",
         "title":"Charder Connect",
         "datetime":"2021.03 — 2021.12",
@@ -16,7 +16,7 @@
         "badges": ["iOS","SWift","Bluetooth"]
     },
     {
-        "img":"/personal_website/src/assets/img/image/proscan.png",
+        "img":"./src/assets/img/image/proscan.png",
         "url":"https://apps.apple.com/us/app/charder-proscan/id1570226952",
         "title":"Charder Proscan",
         "datetime":"2022.01 — 2022.12",
@@ -24,7 +24,7 @@
         "badges": ["iOS","SWift","Bluetooth"]
     },
     {
-        "img":"/personal_website/src/assets/img/image/cacataxi.png",
+        "img":"./src/assets/img/image/cacataxi.png",
         "url":"https://apps.apple.com/tw/app/caca-taxi/id6466410175",
         "title":"CaCa Taxi",
         "datetime":"2023.08 — 2024.08",
