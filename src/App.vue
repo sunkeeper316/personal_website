@@ -136,9 +136,7 @@ function scrollToSection(sectionId) {
 
   gap: 10px;
 }
-.badge {
-  @apply bg-teal-800 text-teal-300 text-xs font-semibold px-3 py-1 rounded-full;
-}
+
 .item-1 {
   padding: 80px;
 }
@@ -146,7 +144,9 @@ function scrollToSection(sectionId) {
   overflow-y: auto;
   padding: 80px;
 }
-
+.badge {
+  @apply bg-teal-800 text-teal-300 text-xs font-semibold px-3 py-1 rounded-full;
+}
 .tel-block {
   @apply relative inline-block;
 }
@@ -195,5 +195,20 @@ function scrollToSection(sectionId) {
 .nav-link:hover::before {
   width: 60px; /* 游標移過去時橫線變長 */
   background-color: #ffffff; /* 游標移過去時橫線變為白色 */
+}
+/* 手機佈局 */
+@media (max-width: 768px) {
+  .app {
+    display: block; /* 單列佈局 */
+    height: 100vh;
+    overflow-y: auto; /* 確保內容可以垂直滾動 */
+    overflow-x: hidden; /* 防止橫向滾動 */
+  }
+
+  .item-1, .item-2, .item-3 {
+    padding: 20px; /* 減少手機上的內邊距 */
+    max-width: 100%; /* 確保內容不會超過容器寬度 */
+    word-wrap: break-word; /* 防止文字溢出，換行處理 */
+  }
 }
 </style>

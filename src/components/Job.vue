@@ -5,7 +5,7 @@
       <div>
         <h3 class="text-white text-lg font-semibold">{{ title }}</h3>
         <p class="text-gray-400 text-sm mt-2">{{ content }}</p>
-        <div class="flex space-x-2 mt-2">
+        <div class="flex flex-wrap space-x-2 mt-2">
           <span v-for="(badge, index) in badges" :key="index" class="badge">
             {{ badge }}
           </span>
@@ -17,7 +17,7 @@
 
 <style scoped>
 .badge {
-  @apply bg-teal-800 text-teal-300 text-xs font-semibold px-3 py-1 rounded-full;
+  @apply bg-teal-800 text-teal-300 text-xs font-semibold px-3 py-1 rounded-full my-1;
 }
 </style>
 

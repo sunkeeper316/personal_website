@@ -5,17 +5,15 @@
       alt="Project Image"
       class="w-24 h-24 rounded-md"
     />
-    <div>
+    <div class="flex-grow">
       <h3 class="text-white text-lg font-semibold">{{title}}</h3>
       <p class="text-gray-400 text-sm">{{datetime}}</p>
       <p class="text-gray-400 text-sm mt-2">{{content}}</p>
-      <div class="flex space-x-2 mt-2">
-        <div class="flex space-x-2 mt-2">
+      <div class="flex flex-wrap justify-start space-x-2 mt-2">
           <span v-for="(badge, index) in badges" :key="index" class="badge">
             {{ badge }}
           </span>
         </div>
-      </div>
       <div class="flex mt-4">
         <a
           :href="url"
@@ -38,7 +36,7 @@
 
 <style scoped>
 .badge {
-    @apply bg-teal-800 text-teal-300 text-xs font-semibold px-3 py-1 rounded-full;
+    @apply bg-teal-800 text-teal-300 text-xs font-semibold px-3 py-1 rounded-full my-1 space-x-0;
 }
 </style>
 
