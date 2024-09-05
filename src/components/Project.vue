@@ -9,7 +9,7 @@
       <h3 class="text-white text-lg font-semibold">{{title}}</h3>
       <p class="text-gray-400 text-sm">{{datetime}}</p>
       <p class="text-gray-400 text-sm mt-2">{{content}}</p>
-      <div class="flex flex-wrap justify-start space-x-2 mt-2">
+      <div class="flex flex-wrap justify-start gap-2 mt-2">
           <span v-for="(badge, index) in badges" :key="index" class="badge">
             {{ badge }}
           </span>

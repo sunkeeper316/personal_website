@@ -1,5 +1,24 @@
 <template>
-  <div class="app h-screen">
+  <!-- 漢堡選單放在 .app 之外，確保它在頁面頂部 -->
+  <div class="fixed top-0 left-0 w-full bg-gray-900 p-4 md:hidden z-50">
+    <button @click="toggleMenu" class="text-white">
+      <!-- 漢堡選單圖示 -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- 漢堡選單的選項 -->
+  <div v-if="isMenuOpen" class="fixed top-12 left-0 w-full bg-gray-800 p-4 z-50">
+    <nav class="flex flex-col space-y-4">
+      <a href="#" class="nav-link text-white" @click="scrollToSection('about')">ABOUT</a>
+      <a href="#" class="nav-link text-white" @click="scrollToSection('experience')">EXPERIENCE</a>
+      <a href="#" class="nav-link text-white" @click="scrollToSection('projects')">PROJECTS</a>
+    </nav>
+  </div>
+
+  <div class="app h-screen pt-16">
     <div class="item-1 flex flex-col">
       <div class="flex flex-col grow text-white">
         <h1 class="text-5xl font-bold mb-2">Huang Sun</h1>
@@ -8,7 +27,15 @@
         <p>總年資 | {{ totalYears }} 年</p>
         <p class="text-customGray">偉盟系統股份有限公司 | ios app開發工程師</p>
         <p class="text-customGray">{{ BaseJson.school }}</p>
-        <nav class="flex flex-col space-y-4 mt-20">
+        <div class="flex flex-wrap justify-start gap-2 mt-5">
+          <span v-for="(skill, index) in BaseJson.skill" :key="index" class="badge">
+            {{ skill }}
+          </span>
+        </div>
+      <div class="flex mt-4">
+        
+      </div>
+        <nav class="hidden md:flex flex-col space-y-4 mt-5">
           <a href="#" class="nav-link" @click="scrollToSection('about')"
             >ABOUT</a
           >
@@ -21,7 +48,7 @@
         </nav>
       </div>
       <!-- 社交媒体图标 -->
-      <div class="flex space-x-4 mt-10">
+      <div class="flex space-x-4 mt-5">
         <a
           href="https://github.com/sunkeeper316"
           class="text-gray-400 hover:text-blue-600"
@@ -92,6 +119,15 @@ import BaseJson from "./assets/text/base.json";
 import ProjectListJson from "./assets/text/project.json";
 import JobListJson from "./assets/text/job.json";
 import { computed } from "vue"; // 確保正確導入 computed
+import { ref } from 'vue'
+
+// 使用 ref 定義 isMenuOpen 狀態
+const isMenuOpen = ref(false)
+
+// 切換漢堡選單顯示狀態
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+}
 
 // 定義開始日期
 const startDate = new Date("2019-08-01");
@@ -122,6 +158,7 @@ const sendProfileEvent = (item) => {
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
   section.scrollIntoView({ behavior: "smooth", top: 50 });
+  isMenuOpen.value = false
 }
 </script>
 
@@ -145,7 +182,7 @@ function scrollToSection(sectionId) {
   padding: 80px;
 }
 .badge {
-  @apply bg-teal-800 text-teal-300 text-xs font-semibold px-3 py-1 rounded-full;
+  @apply bg-teal-800 text-teal-300 text-xs font-semibold px-3 py-1 rounded-full my-1;
 }
 .tel-block {
   @apply relative inline-block;
