@@ -18,7 +18,7 @@
       </div>
       <div class="flex mt-4">
         <a
-          href="#"
+          :href="url"
           class="ml-auto text-right text-white hover:text-gray-400 transition flex items-center"
         >
           前往查看
@@ -50,6 +50,10 @@ export default {
       type: Number,
       required: true
     },
+    img: {
+      type: String,
+      required: true
+    },
     url: {
       type: String,
       required: true
@@ -74,7 +78,7 @@ export default {
   },
     data() {
       return {
-        imgurl: this.url // 确保路径正确
+        imgurl: this.img // 确保路径正确
       };
     },
     mounted() {

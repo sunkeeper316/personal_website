@@ -72,6 +72,7 @@
           <Project
             v-for="(project, index) in ProjectListJson"
             :key="index"
+            :img="project.img"
             :url="project.url"
             :title="project.title"
             :datetime="project.datetime"
