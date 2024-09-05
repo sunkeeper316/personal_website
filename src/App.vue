@@ -2,12 +2,12 @@
   <div class="app h-screen">
     <div class="item-1 flex flex-col">
       <div class="flex flex-col grow  text-white">
-        <h1 class="text-5xl font-bold mb-2">Brittany Chiang</h1>
-        <h2 class="text-2xl">黃德桑</h2>
+        <h1 class="text-5xl font-bold mb-2">Huang Sun</h1>
+        <h2 class="text-2xl">{{ BaseJson.name }}</h2>
         <p>Cross-Platform Mobile Developer</p>
-        <p>總年資 | 4 年</p>
+        <p>總年資 | {{ totalYears }} 年</p>
         <p class="text-customGray">偉盟系統股份有限公司 | ios app開發工程師</p>
-        <p class="text-customGray">興國管理學院 |資訊管理學系 大學畢業</p>
+        <p class="text-customGray">{{ BaseJson.school }}</p>
         <nav class="flex flex-col space-y-4 mt-20">
           <a href="#" class="nav-link" @click="scrollToSection('about')">ABOUT</a>
           <a href="#" class="nav-link" @click="scrollToSection('experience')">EXPERIENCE</a>
@@ -37,19 +37,9 @@
     </div>
     <main class="item-3">
         <div id="about" class="container mx-auto p-4  text-white">
-          <h2 class="text-2xl font-bold">Home Page</h2>
-          <p>我出生在嘉義市，那裡感覺就像一個大家庭，鄰里友好。
-              之前，我在新竹科學園區的一家名為廣歡科技的公司擔任操作員。 由於薪酬豐厚，我在那裡待了 5 年，但當公司不得不對其運營做出重大決策時，情況發生了變化，導致裁員，不幸的是，我也是其中之一。
-              面對裁員的現實，我藉此機會重新審視了我在大學學習期間培養的對程式設計的熱情。 通過朋友的介紹，我發現了資策會，決定參加他們的App開發班。 通過自學和專業訓練，我有幸在程式設計方面取得了長足的進步，甚至成為了一個小組的組長，幫助同學們克服挑戰。 在這段學習期間，我能夠綜合各種技能，完成各種項目。 畢業後，我有機會和同學一起做一個專題，學到了很多專業知識。
-              我目前有超過 3 年的 App 工程師經驗。 由於公司要求，本人精通Android和iOS開發。 我從事的產品需要集成藍牙和WiFi，因此我也實現了很多物聯網 (IoT) 開發技術。 除了公司發布的應用程序，我還需要為客戶開發庫，作為產品的一部分。 過去的三年讓我學到了比在學校學到的更多的東西，我覺得自己的技能有了很大的提高。
-              此外，我也利用空閒時間做side projects，以更快地提高自己的技能。 我大部分時間都花在學習程式技術上。 目前，我能夠處理任何具有官方文檔的技術。 除了應用程序開發，我還增加了使用 Nodejs 和 MySQL 進行後端開發的知識。
-              還學習了跨平台App開發的Flutter框架，可以為個人項目節省很多時間，對以後的合作也有好處。
-              除了學習技術，我還喜歡利用空閒時間去戶外，爬山和健身，這些都是我現在最喜歡的活動。 它們可以增強我的身
-              心，這將有助於我的工作。 作為一名軟體工程師，我在這個領域感覺很舒服，也很自信，希望以後能在這個領域更上一層樓，能夠解決各種問題，為公司做出更好的項目。</p>
-          
-        </div>
+          <p>{{ BaseJson.autobiography }}</p>
 
-        <div id="experience" class="experience-list mt-20">
+          <div id="experience" class="experience-list mt-20">
           <!-- 第一个工作经历 -->
           <div class="experience-item mb-8">
             <div class="flex items-start space-x-4">
@@ -113,65 +103,48 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <div id="projects" class="experience-list mt-20">
-          <div class="experience-item flex space-x-4 bg-gray-800 p-4 rounded-lg mb-8"> 
-            <img src="./assets/img/image/ocare.png" alt="Project Image" class="w-24 h-24 rounded-md">
-            <div>
-                <h3 class="text-white text-lg font-semibold">CaCa Taxi</h3>
-                <p class="text-gray-400 text-sm">2023.08 — 2024.02</p>
-                <p class="text-gray-400 text-sm mt-2">
-                    和團隊一起完成的叫車App，負責的部分是flutter App 雙平台，配合後端串接API，google地圖，還有司機端CaCa Driver 是兩個互相配合串接的App，類似Uber，持續維護中。
-                </p>
-                <div class="flex space-x-2 mt-2">
-                    <span class="badge">Flutter</span>
-                    <span class="badge">google地圖</span>
-                    <span class="badge">API</span>
-                </div>
-                <div class="flex mt-4">
-                  <a href="#" class="ml-auto text-right text-white hover:text-gray-400 transition flex items-center ">
-                      前往查看
-                      <svg class="w-4 h-4 ml-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                          <path d="M10.5 17l6-6-6-6v12z"></path>
-                      </svg>
-                  </a>
-                </div>
-            </div>
           </div>
 
-          <div class="experience-item flex space-x-4 bg-gray-800 p-4 rounded-lg mb-8"> 
-            <img src="./assets/img/image/ocare.png" alt="Project Image" class="w-24 h-24 rounded-md">
-            <div>
-                <h3 class="text-white text-lg font-semibold">CaCa Taxi</h3>
-                <p class="text-gray-400 text-sm">2023.08 — 2024.02</p>
-                <p class="text-gray-400 text-sm mt-2">
-                    和團隊一起完成的叫車App，負責的部分是flutter App 雙平台，配合後端串接API，google地圖，還有司機端CaCa Driver 是兩個互相配合串接的App，類似Uber，持續維護中。
-                </p>
-                <div class="flex space-x-2 mt-2">
-                    <span class="badge">Flutter</span>
-                    <span class="badge">google地圖</span>
-                    <span class="badge">API</span>
-                </div>
-                <div class="flex mt-4">
-                  <a href="#" class="ml-auto text-right text-white hover:text-gray-400 transition flex items-center ">
-                      前往查看
-                      <svg class="w-4 h-4 ml-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                          <path d="M10.5 17l6-6-6-6v12z"></path>
-                      </svg>
-                  </a>
-                </div>
-            </div>
+          <div id="projects" class="experience-list mt-20">
+            <Project
+              v-for="(project, index) in ProjectListJson"
+              :key="index"
+              :url="project.url"
+              :title="project.title"
+              :datetime="project.datetime"
+              :content="project.content"
+              :badges="project.badges"
+            />
           </div>
-          <Project url="/personal_website/src/assets/img/image/ocare.png" title="點擊這裡打開連結" datetime="2023.08 — 2024.02" content="和團隊一起完成的叫車App，負責的部分是flutter App 雙平台，配合後端串接API，google地圖，還有司機端CaCa Driver 是兩個互相配合串接的App，類似Uber，持續維護中。" :badges="['Flutter','google地圖','API']" />
-        </div>
 
+        </div>
     </main>
   </div>
 </template>
 
 <script setup>
 import Project from './components/Project.vue'
+import BaseJson from './assets/text/base.json'
+import ProjectListJson from './assets/text/project.json'
+import { computed } from 'vue'  // 確保正確導入 computed
+
+// 定義開始日期
+const startDate = new Date('2019-08-01')
+// 計算年資
+const totalYears = computed(() => {
+  const currentDate = new Date()
+  const years = currentDate.getFullYear() - startDate.getFullYear()
+
+  const monthsDiff = currentDate.getMonth() - startDate.getMonth()
+  const daysDiff = currentDate.getDate() - startDate.getDate()
+
+  // 如果月份或日期在開始日期之前，減少一年
+  if (monthsDiff < 0 || (monthsDiff === 0 && daysDiff < 0)) {
+    return years - 1
+  }
+
+  return years
+})
 
 // GA4 自訂事件 - 點擊個人資料事件
 const sendProfileEvent = (item) => {
@@ -184,8 +157,9 @@ const sendProfileEvent = (item) => {
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     section.scrollIntoView({ behavior: 'smooth' ,top: 50,});
-
 }
+
+
 </script>
 
 <style scoped>

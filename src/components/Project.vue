@@ -46,6 +46,10 @@
 export default {
   name: 'ClickableLabel',
   props: {
+    key: {
+      type: Number,
+      required: true
+    },
     url: {
       type: String,
       required: true
