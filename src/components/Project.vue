@@ -11,10 +11,10 @@
       <p class="text-gray-400 text-sm mt-2">{{content}}</p>
       <div class="flex space-x-2 mt-2">
         <div class="flex space-x-2 mt-2">
-        <span v-for="(badge, index) in badges" :key="index" class="badge">
-          {{ badge }}
-        </span>
-      </div>
+          <span v-for="(badge, index) in badges" :key="index" class="badge">
+            {{ badge }}
+          </span>
+        </div>
       </div>
       <div class="flex mt-4">
         <a

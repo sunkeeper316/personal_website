@@ -1,53 +1,50 @@
 <template>
-    <div class="experience-item mb-8">
-            <div class="flex items-start space-x-4">
-              <div class="text-gray-400 text-sm">2023.04 — PRESENT</div>
-              <div>
-                <h3 class="text-white text-lg font-semibold">ios app開發工程師 · 偉盟系統股份有限公司</h3>
-                <p class="text-gray-400 text-sm mt-2">幫助公司開發電商App 包含flutter app的 iOS 及原生swift iOS app</p>
-                <div class="flex space-x-2 mt-2">
-                  <span class="badge">iOS</span>
-                  <span class="badge">SWIFT</span>
-                  <span class="badge">Flutter</span>
-                </div>
-              </div>
-            </div>
-          </div>
+  <div class="experience-item mb-8">
+    <div class="flex items-start space-x-4">
+      <div class="text-gray-400 text-sm">{{ datetime }}</div>
+      <div>
+        <h3 class="text-white text-lg font-semibold">{{ title }}</h3>
+        <p class="text-gray-400 text-sm mt-2">{{ content }}</p>
+        <div class="flex space-x-2 mt-2">
+          <span v-for="(badge, index) in badges" :key="index" class="badge">
+            {{ badge }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
+
+<style scoped>
+.badge {
+  @apply bg-teal-800 text-teal-300 text-xs font-semibold px-3 py-1 rounded-full;
+}
+</style>
 
 <script>
 export default {
-  name: 'ClickableLabel',
+  name: "ClickableLabel",
   props: {
-    url: {
-      type: String,
-      required: true
-    },
-    title: {
-      type: String,
-      required: true
+    key: {
+      type: Number,
+      required: true,
     },
     datetime: {
       type: String,
-      required: true
+      required: true,
+    },
+    title: {
+      type: String,
+      required: true,
     },
     content: {
       type: String,
-      required: true
+      required: true,
     },
     badges: {
       type: Array,
-      required: true
+      required: true,
     },
-
   },
-    data() {
-      return {
-        imgurl: this.url // 确保路径正确
-      };
-    },
-    mounted() {
-      //console.log(this.url);  // 打印路徑
-    }
-}
+};
 </script>

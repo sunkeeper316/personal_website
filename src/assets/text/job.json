@@ -1,0 +1,20 @@
+[
+    {
+        "datetime":"2023.04 — PRESENT",
+        "title":"ios App開發工程師 · 偉盟系統股份有限公司",
+        "content":"幫助公司開發電商App 包含flutter app的 iOS 及原生swift iOS app",
+        "badges": ["Flutter","iOS","Swift"]
+    },
+    {
+        "datetime":"2023.03 — 2023.04",
+        "title":"ios App開發工程師 · 艾酷互動股份有限公司",
+        "content":"接案公司主要職務為iOS App 軟體開發",
+        "badges": ["Flutter","iOS","Swift"]
+    },
+    {
+        "datetime":"2019.08 — 2023.03",
+        "title":"App開發工程師 · 啟德電子股份有限公司",
+        "content":"協助公司開發公司需求的App程式，iOS為主，必要時支援Android開發，主要串接Bluetooth硬體為主",
+        "badges": ["Bluetooth","Android","iOS","Swift"]
+    }
+]
