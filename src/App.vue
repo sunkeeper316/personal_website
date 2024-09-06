@@ -91,7 +91,7 @@
         </nav>
       </div>
       <!-- 社交媒体图标 -->
-      <div class="flex space-x-4 mt-5">
+      <div class="flex space-x-4 mt-5 ">
         <a
           href="https://github.com/sunkeeper316"
           class="text-gray-400 hover:text-blue-600"
@@ -124,8 +124,12 @@
     </div>
     <div class="item-2"></div>
     <main class="item-3">
-      <div id="about" class="container text-white scroll-margin-top">
-        <p>{{ BaseJson.autobiography }}</p>
+      
+      <div id="about" class=" text-white ">
+        <div class="mt-12 md:mt-0">
+          <p>{{ BaseJson.autobiography }}</p>
+        </div>
+        
       </div>
       <div id="experience" class="experience-list mt-20">
         <Job
@@ -205,12 +209,15 @@ function scrollToSection(sectionId) {
 
   if (isMobile) {
     // 手機版: 使用 scrollIntoView 並通過 margin-top 調整
-    section.style.scrollMarginTop = "120px"; // 根據漢堡選單的高度設置
+    section.style.scrollMarginTop = "80px"; // 根據漢堡選單的高度設置
   }
-
-  // 平滑滾動到目標區域
   section.scrollIntoView({ behavior: "smooth" });
+  // 平滑滾動到目標區域
+  setTimeout(() => {
+    
+    }, 200); 
   isMenuOpen.value = false;
+  
 }
 </script>
 
@@ -303,4 +310,5 @@ function scrollToSection(sectionId) {
     word-wrap: break-word; /* 防止文字溢出，換行處理 */
   }
 }
+
 </style>
