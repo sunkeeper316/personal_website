@@ -1,20 +1,61 @@
 <template>
   <!-- 漢堡選單放在 .app 之外，確保它在頁面頂部 -->
-  <div class="fixed top-0 left-0 w-full bg-gray-900 p-4 md:hidden z-50">
+  <div
+    class="fixed top-0 left-0 w-full bg-gray-900 p-4 md:hidden z-50 flex justify-end"
+  >
     <button @click="toggleMenu" class="text-white">
       <!-- 漢堡選單圖示 -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+      <svg
+        v-if="!isMenuOpen"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4 6h16M4 12h16m-7 6h7"
+        />
+      </svg>
+      <svg
+        v-if="isMenuOpen"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12"
+        />
       </svg>
     </button>
   </div>
 
   <!-- 漢堡選單的選項 -->
-  <div v-if="isMenuOpen" class="fixed top-12 left-0 w-full bg-gray-800 p-4 z-50">
-    <nav class="flex flex-col space-y-4">
-      <a href="#" class="nav-link text-white" @click="scrollToSection('about')">ABOUT</a>
-      <a href="#" class="nav-link text-white" @click="scrollToSection('experience')">EXPERIENCE</a>
-      <a href="#" class="nav-link text-white" @click="scrollToSection('projects')">PROJECTS</a>
+  <div v-if="isMenuOpen" class="fixed top-12 right-0 bg-gray-800 p-4 z-50">
+    <nav class="flex flex-col space-y-4 text-right">
+      <a href="#" class="nav-link text-white" @click="scrollToSection('about')"
+        >ABOUT</a
+      >
+      <a
+        href="#"
+        class="nav-link text-white"
+        @click="scrollToSection('experience')"
+        >EXPERIENCE</a
+      >
+      <a
+        href="#"
+        class="nav-link text-white"
+        @click="scrollToSection('projects')"
+        >PROJECTS</a
+      >
     </nav>
   </div>
 
@@ -28,13 +69,15 @@
         <p class="text-customGray">偉盟系統股份有限公司 | ios app開發工程師</p>
         <p class="text-customGray">{{ BaseJson.school }}</p>
         <div class="flex flex-wrap justify-start gap-2 mt-5">
-          <span v-for="(skill, index) in BaseJson.skill" :key="index" class="badge">
+          <span
+            v-for="(skill, index) in BaseJson.skill"
+            :key="index"
+            class="badge"
+          >
             {{ skill }}
           </span>
         </div>
-      <div class="flex mt-4">
-        
-      </div>
+        <div class="flex mt-4"></div>
         <nav class="hidden md:flex flex-col space-y-4 mt-5">
           <a href="#" class="nav-link" @click="scrollToSection('about')"
             >ABOUT</a
@@ -81,32 +124,31 @@
     </div>
     <div class="item-2"></div>
     <main class="item-3">
-      <div id="about" class="container mx-auto p-4 text-white">
+      <div id="about" class="container text-white scroll-margin-top">
         <p>{{ BaseJson.autobiography }}</p>
+      </div>
+      <div id="experience" class="experience-list mt-20">
+        <Job
+          v-for="(job, index) in JobListJson"
+          :key="index"
+          :datetime="job.datetime"
+          :title="job.title"
+          :content="job.content"
+          :badges="job.badges"
+        />
+      </div>
 
-        <div id="experience" class="experience-list mt-20">
-          <Job
-            v-for="(job, index) in JobListJson"
-            :key="index"
-            :datetime="job.datetime"
-            :title="job.title"
-            :content="job.content"
-            :badges="job.badges"
-          />
-        </div>
-
-        <div id="projects" class="experience-list mt-20">
-          <Project
-            v-for="(project, index) in ProjectListJson"
-            :key="index"
-            :img="project.img"
-            :url="project.url"
-            :title="project.title"
-            :datetime="project.datetime"
-            :content="project.content"
-            :badges="project.badges"
-          />
-        </div>
+      <div id="projects" class="experience-list mt-20">
+        <Project
+          v-for="(project, index) in ProjectListJson"
+          :key="index"
+          :img="project.img"
+          :url="project.url"
+          :title="project.title"
+          :datetime="project.datetime"
+          :content="project.content"
+          :badges="project.badges"
+        />
       </div>
     </main>
   </div>
@@ -119,15 +161,15 @@ import BaseJson from "./assets/text/base.json";
 import ProjectListJson from "./assets/text/project.json";
 import JobListJson from "./assets/text/job.json";
 import { computed } from "vue"; // 確保正確導入 computed
-import { ref } from 'vue'
+import { ref } from "vue";
 
 // 使用 ref 定義 isMenuOpen 狀態
-const isMenuOpen = ref(false)
+const isMenuOpen = ref(false);
 
 // 切換漢堡選單顯示狀態
 const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value
-}
+  isMenuOpen.value = !isMenuOpen.value;
+};
 
 // 定義開始日期
 const startDate = new Date("2019-08-01");
@@ -157,8 +199,18 @@ const sendProfileEvent = (item) => {
 
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
-  section.scrollIntoView({ behavior: "smooth", top: 50 });
-  isMenuOpen.value = false
+  //section.scrollIntoView({ behavior: "smooth", top: 50 });
+  // 檢查是否是手機版（根據視窗寬度判斷）
+  const isMobile = window.innerWidth <= 768; // 768px 以下視為手機版
+
+  if (isMobile) {
+    // 手機版: 使用 scrollIntoView 並通過 margin-top 調整
+    section.style.scrollMarginTop = "120px"; // 根據漢堡選單的高度設置
+  }
+
+  // 平滑滾動到目標區域
+  section.scrollIntoView({ behavior: "smooth" });
+  isMenuOpen.value = false;
 }
 </script>
 
@@ -180,6 +232,7 @@ function scrollToSection(sectionId) {
 .item-3 {
   overflow-y: auto;
   padding: 80px;
+  scrollbar-width: none;
 }
 .badge {
   @apply bg-teal-800 text-teal-300 text-xs font-semibold px-3 py-1 rounded-full my-1;
@@ -242,7 +295,9 @@ function scrollToSection(sectionId) {
     overflow-x: hidden; /* 防止橫向滾動 */
   }
 
-  .item-1, .item-2, .item-3 {
+  .item-1,
+  .item-2,
+  .item-3 {
     padding: 20px; /* 減少手機上的內邊距 */
     max-width: 100%; /* 確保內容不會超過容器寬度 */
     word-wrap: break-word; /* 防止文字溢出，換行處理 */
