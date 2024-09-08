@@ -1,0 +1,35 @@
+[
+    {
+        "datetime": "2023.04 — NOW",
+        "title": "iOS App开发工程师 · 伟盟系统股份有限公司",
+        "content": "帮助公司开发电商App，包含Flutter App 及 Swift iOS App",
+        "badges": [
+            "Flutter",
+            "iOS",
+            "Swift",
+            "C#",
+            "MS-SQL"
+        ]
+    },
+    {
+        "datetime": "2023.03 — 2023.04",
+        "title": "iOS App开发工程师 · 艾酷互动股份有限公司",
+        "content": "接案公司主要职务为iOS App 软体开发",
+        "badges": [
+            "Flutter",
+            "iOS",
+            "Swift"
+        ]
+    },
+    {
+        "datetime": "2019.08 — 2023.03",
+        "title": "App开发工程师 · 启德电子股份有限公司",
+        "content": "协助公司开发公司需求的App程式，iOS为主，必要时支援Android开发，主要串接Bluetooth硬体为主",
+        "badges": [
+            "Bluetooth",
+            "Android",
+            "iOS",
+            "Swift"
+        ]
+    }
+]

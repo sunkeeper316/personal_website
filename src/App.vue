@@ -63,14 +63,14 @@
     <div class="item-1 flex flex-col">
       <div class="flex flex-col grow text-white">
         <h1 class="text-5xl font-bold mb-2">Huang Sun</h1>
-        <h2 class="text-2xl">{{ BaseJson.name }}</h2>
+        <h2 class="text-2xl">{{ currentBase.name }}</h2>
         <p>Cross-Platform Mobile Developer</p>
         <p>總年資 | {{ totalYears }} 年</p>
         <p class="text-customGray">偉盟系統股份有限公司 | ios app開發工程師</p>
-        <p class="text-customGray">{{ BaseJson.school }}</p>
+        <p class="text-customGray">{{ currentBase.school }}</p>
         <div class="flex flex-wrap justify-start gap-2 mt-5">
           <span
-            v-for="(skill, index) in BaseJson.skill"
+            v-for="(skill, index) in currentBase.skill"
             :key="index"
             class="badge"
           >
@@ -90,8 +90,10 @@
           >
         </nav>
       </div>
-      <!-- 社交媒体图标 -->
-      <div class="flex space-x-4 mt-5 ">
+      
+      <div class="flex justify-between items-center mt-5 w-full">        
+        <!-- 社交媒体图标 -->
+        <div class="flex space-x-4 ">
         <a
           href="https://github.com/sunkeeper316"
           class="text-gray-400 hover:text-blue-600"
@@ -120,20 +122,28 @@
         >
           <img src="./assets/img/icon/email.svg" alt="Icon description" />
         </a>
+        </div>
+        <!-- 多语言切换按钮 -->
+        <div class="flex space-x-2">
+            <button @click="setLanguage('en')" class="text-gray-400 hover:text-blue-600">EN</button>
+            <button @click="setLanguage('zh-cn')" class="text-gray-400 hover:text-blue-600">简</button>
+            <button @click="setLanguage('zh-tw')" class="text-gray-400 hover:text-blue-600">繁</button>
+        </div>
       </div>
+      
     </div>
     <div class="item-2"></div>
     <main class="item-3">
       
       <div id="about" class=" text-white ">
         <div class="mt-12 md:mt-0">
-          <p>{{ BaseJson.autobiography }}</p>
+          <p>{{ currentBase.autobiography }}</p>
         </div>
         
       </div>
       <div id="experience" class="experience-list mt-20">
         <Job
-          v-for="(job, index) in JobListJson"
+          v-for="(job, index) in currentJob"
           :key="index"
           :datetime="job.datetime"
           :title="job.title"
@@ -144,7 +154,7 @@
 
       <div id="projects" class="experience-list mt-20 mb-20">
         <Project
-          v-for="(project, index) in ProjectListJson"
+          v-for="(project, index) in currentProject"
           :key="index"
           :img="project.img"
           :url="project.url"
@@ -161,11 +171,61 @@
 <script setup>
 import Project from "./components/Project.vue";
 import Job from "./components/Job.vue";
-import BaseJson from "./assets/text/base.json";
-import ProjectListJson from "./assets/text/project.json";
-import JobListJson from "./assets/text/job.json";
+
+import BaseTWJson from "./assets/text/zh_tw/base_zh_tw.json";
+import BaseCNJson from "./assets/text/zh_cn/base_zh_cn.json";
+import BaseENJson from "./assets/text/en/base_en.json";
+
+import ProjectListTWJson from "./assets/text/zh_tw/project_zh_tw.json";
+import ProjectListCNJson from "./assets/text/zh_cn/project_zh_cn.json";
+import ProjectListENJson from "./assets/text/en/project_en.json";
+
+import JobListTWJson from "./assets/text/zh_tw/job_zh_tw.json";
+import JobListCNJson from "./assets/text/zh_cn/job_zh_cn.json";
+import JobListENJson from "./assets/text/en/job_en.json";
+
 import { computed } from "vue"; // 確保正確導入 computed
 import { ref } from "vue";
+
+// 定义一个响应式的 selectedLanguage，默认为 'en'
+const selectedLanguage = ref('en');
+
+// 语言数据对象
+const base_translations = {
+  'en': BaseENJson,
+  'zh-cn': BaseCNJson,
+  'zh-tw': BaseTWJson
+};
+
+
+const currentBase = computed(() => {
+  return base_translations[selectedLanguage.value] || {};
+});
+
+const job_translations = {
+  'en': JobListENJson,
+  'zh-cn': JobListCNJson,
+  'zh-tw': JobListTWJson
+};
+
+const currentJob = computed(() => {
+  return job_translations[selectedLanguage.value] || {};
+});
+
+const project_translations = {
+  'en': ProjectListENJson,
+  'zh-cn': ProjectListCNJson,
+  'zh-tw': ProjectListTWJson
+};
+
+const currentProject = computed(() => {
+  return project_translations[selectedLanguage.value] || {};
+});
+
+const setLanguage = (languageCode) => {
+  selectedLanguage.value = languageCode;
+  localStorage.setItem('language', languageCode); // 保存用户选择
+};
 
 // 使用 ref 定義 isMenuOpen 狀態
 const isMenuOpen = ref(false);

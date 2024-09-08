@@ -1,0 +1,35 @@
+[
+    {
+        "datetime": "2023.04 — NOW",
+        "title": "iOS App Development Engineer · Weimeng Systems Co., Ltd.",
+        "content": "Help companies develop e-commerce apps, including Flutter App and Swift iOS App",
+        "badges": [
+            "Flutter",
+            "iOS",
+            "Swift",
+            "C#",
+            "MS-SQL"
+        ]
+    },
+    {
+        "datetime": "2023.03 — 2023.04",
+        "title": "iOS App Development Engineer·iKu Interactive Co., Ltd.",
+        "content": "The main job of the company receiving the case is iOS App software development",
+        "badges": [
+            "Flutter",
+            "iOS",
+            "Swift"
+        ]
+    },
+    {
+        "datetime": "2019.08 — 2023.03",
+        "title": "App Development Engineer · Kai Tak Electronics Co., Ltd.",
+        "content": "Assist the company to develop App programs that the company needs, mainly iOS, support Android development when necessary, and mainly connect Bluetooth hardware",
+        "badges": [
+            "Bluetooth",
+            "Android",
+            "iOS",
+            "Swift"
+        ]
+    }
+]

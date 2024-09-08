@@ -1,0 +1,50 @@
+[
+    {
+        "img":"./img/ocare.png",
+        "url":"https://apps.apple.com/us/app/ocare-body-composition-app/id1508430987",
+        "title":"Ocare",
+        "datetime":"2020.04 — 2020.08",
+        "content":"The company's Bluetooth-enabled products are connected to the mobile phone's native Bluetooth-enabled App. It is independently developed and put on the iOS system.",
+        "badges": ["iOS","SWift","API","Bluetooth"]
+        },
+        {
+        "img":"./img/connect.png",
+        "url":"https://apps.apple.com/us/app/charder-connect/id1593812265",
+        "title":"Charder Connect",
+        "datetime":"2021.03 — 2021.12",
+        "content":"The company's charder series wireless products are connected to the App, including Bluetooth and Wifi products. It is mainly used to demonstrate to customers to facilitate the company's promotion of the Bluetooth Library series. It is independently developed according to the company's UIUX design. Available on iOS App Store ",
+        "badges": ["iOS","SWift","Bluetooth"]
+        },
+        {
+        "img":"./img/proscan.png",
+        "url":"https://apps.apple.com/us/app/charder-proscan/id1570226952",
+        "title":"Charder Proscan",
+        "datetime":"2022.01 — 2022.12",
+        "content":"The company's human body analysis instrument Bluetooth serial connection App, the functions include: file sharing, Qrcode file sharing, chart analysis, independently developed according to the company's UIUX design and released on the iOS App Store.",
+        "badges": ["iOS","SWift","Bluetooth"]
+        },
+        {
+        "img":"./img/cacataxi.png",
+        "url":"https://apps.apple.com/tw/app/caca-taxi/id6466410175",
+        "title":"CaCa Taxi",
+        "datetime":"2023.08 — 2024.08",
+        "content":"The ride-hailing app completed with the team. The responsible part is the dual platform of flutter App, which cooperates with the back-end serial connection API, Google Maps, and the driver side CaCa Driver. They are two apps that cooperate with each other and are connected in series, similar to Uber, passenger terminal.",
+        "badges": ["Flutter","google maps","API"]
+        },
+        {
+        "img":"./img/cacadriver.png",
+        "url":"https://apps.apple.com/tw/app/caca-driver/id6467549450",
+        "title":"CaCa Driver",
+        "datetime":"2023.08 — 2024.08",
+        "content":"The ride-hailing app completed with the team. The responsible part is the dual platform of flutter App, which cooperates with the back-end serial connection API, Google Maps, and the driver side CaCa Driver. They are two apps that cooperate with each other and are connected in series, similar to Uber, driver side.",
+        "badges": ["Flutter","google maps","API"]
+        },
+        {
+        "img":"./img/holdhand.png",
+        "url":"https://apps.apple.com/tw/app/%E7%89%BD%E7%89%BD%E6%89%8B/id6503678398",
+        "title":"Hold hands",
+        "datetime":"2020.07 — 2024.06",
+        "content":"Side Project\nChildren's contact book platform, 1.0 only operates on the Web, participates in 2.0 App development, Flutter App cooperates with the Web version backend API, the App is mainly for parents to operate, the content is very rich, and the content is not inferior to commonly used Apps on the market ",
+        "badges": ["Flutter","API"]
+        }
+]

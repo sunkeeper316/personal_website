@@ -1,0 +1,74 @@
+[
+    {
+        "img": "./img/ocare.png",
+        "url": "https://apps.apple.com/us/app/ocare-body-composition-app/id1508430987",
+        "title": "Ocare",
+        "datetime": "2020.04 — 2020.08",
+        "content": "将公司有蓝芽功能的产品，串接手机原生蓝芽功能的App。独立开发到上架iOS系统。",
+        "badges": [
+            "iOS",
+            "SWift",
+            "API",
+            "Bluetooth"
+        ]
+    },
+    {
+        "img": "./img/connect.png",
+        "url": "https://apps.apple.com/us/app/charder-connect/id1593812265",
+        "title": "Charder Connect",
+        "datetime": "2021.03 — 2021.12",
+        "content": "公司charder系列无线产品串接App，有蓝芽和Wifi的产品都有，主要是向客户展示使用，以方便公司对于蓝芽Library系列的推广，根据公司UIUX的设计独立开发到上架iOS App Store。",
+        "badges": [
+            "iOS",
+            "SWift",
+            "Bluetooth"
+        ]
+    },
+    {
+        "img": "./img/proscan.png",
+        "url": "https://apps.apple.com/us/app/charder-proscan/id1570226952",
+        "title": "Charder Proscan",
+        "datetime": "2022.01 — 2022.12",
+        "content": "公司人体分析仪器蓝芽串接App，功能包含：档案分享、Qrcode分享档案、图表分析，根据公司UIUX设计独立开发到上架iOS App Store。",
+        "badges": [
+            "iOS",
+            "SWift",
+            "Bluetooth"
+        ]
+    },
+    {
+        "img": "./img/cacataxi.png",
+        "url": "https://apps.apple.com/tw/app/caca-taxi/id6466410175",
+        "title": "CaCa Taxi",
+        "datetime": "2023.08 — 2024.08",
+        "content": "和团队一起完成的叫车App，负责的部分是flutter App 双平台，配合后端串接API，google地图，还有司机端CaCa Driver 是两个互相配合串接的App，类似Uber，乘客端。",
+        "badges": [
+            "Flutter",
+            "google地图",
+            "API"
+        ]
+    },
+    {
+        "img": "./img/cacadriver.png",
+        "url": "https://apps.apple.com/tw/app/caca-driver/id6467549450",
+        "title": "CaCa Driver",
+        "datetime": "2023.08 — 2024.08",
+        "content": "和团队一起完成的叫车App，负责的部分是flutter App 双平台，配合后端串接API，google地图，还有司机端CaCa Driver 是两个互相配合串接的App，类似Uber，司机端。",
+        "badges": [
+            "Flutter",
+            "google地图",
+            "API"
+        ]
+    },
+    {
+        "img": "./img/holdhand.png",
+        "url": "https://apps.apple.com/tw/app/%E7%89%BD%E7%89%BD%E6%89%8B/id6503678398",
+        "title": "牵牵手",
+        "datetime": "2020.07 — 2024.06",
+        "content": "Side Project\n幼儿联络簿平台，1.0只有Web运作，参与2.0App开发，Flutter App 配合Web版本后台API，App主要是给家长操作，内容非常丰富，内容不输市面上常用App ",
+        "badges": [
+            "Flutter",
+            "API"
+        ]
+    }
+]
