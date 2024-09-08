@@ -142,7 +142,7 @@
         />
       </div>
 
-      <div id="projects" class="experience-list mt-20">
+      <div id="projects" class="experience-list mt-20 mb-20">
         <Project
           v-for="(project, index) in ProjectListJson"
           :key="index"
