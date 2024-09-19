@@ -19,7 +19,7 @@
           :href="url"
           class="ml-auto text-right text-white hover:text-gray-400 transition flex items-center"
         >
-          前往查看
+            {{ urlTitle }}
           <svg
             class="w-4 h-4 ml-1"
             fill="currentColor"
@@ -49,6 +49,10 @@ export default {
       required: true
     },
     img: {
+      type: String,
+      required: true
+    },
+    urlTitle: {
       type: String,
       required: true
     },

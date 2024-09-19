@@ -64,10 +64,11 @@
       <div class="flex flex-col grow text-white">
         <h1 class="text-5xl font-bold mb-2">Huang Sun</h1>
         <h2 class="text-2xl">{{ currentBase.name }}</h2>
-        <p>Cross-Platform Mobile Developer</p>
-        <p>總年資 | {{ totalYears }} 年</p>
-        <p class="text-customGray">偉盟系統股份有限公司 | ios app開發工程師</p>
-        <p class="text-customGray">{{ currentBase.school }}</p>
+        <p>{{ currentBase.position }}</p>
+        
+        <p class="text-customGray">{{ currentBase.work }}</p>
+        <p class="text-customGray">{{ totalYears }}</p>
+        <!-- <p class="text-customGray">{{ currentBase.school }}</p> -->
         <div class="flex flex-wrap justify-start gap-2 mt-5">
           <span
             v-for="(skill, index) in currentBase.skill"
@@ -157,6 +158,7 @@
           v-for="(project, index) in currentProject"
           :key="index"
           :img="project.img"
+          :urlTitle="project.urlTitle"
           :url="project.url"
           :title="project.title"
           :datetime="project.datetime"
@@ -249,8 +251,8 @@ const totalYears = computed(() => {
   if (monthsDiff < 0 || (monthsDiff === 0 && daysDiff < 0)) {
     return years - 1;
   }
-
-  return years;
+  
+  return `${base_translations[selectedLanguage.value].experience} | ${years} ${base_translations[selectedLanguage.value].years}`;
 });
 
 // GA4 自訂事件 - 點擊個人資料事件
