@@ -54,6 +54,7 @@
     },
     {
         "img": "./img/cacadriver.png",
+        "urlTitle":"前往查看",
         "url": "https://apps.apple.com/tw/app/caca-driver/id6467549450",
         "title": "CaCa Driver",
         "datetime": "2023.08 — 2024.08",
@@ -66,6 +67,7 @@
     },
     {
         "img": "./img/holdhand.png",
+        "urlTitle":"前往查看",
         "url": "https://apps.apple.com/tw/app/%E7%89%BD%E7%89%BD%E6%89%8B/id6503678398",
         "title": "牵牵手",
         "datetime": "2020.07 — 2024.06",

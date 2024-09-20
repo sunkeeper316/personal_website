@@ -189,6 +189,8 @@ import JobListENJson from "./assets/text/en/job_en.json";
 import { computed } from "vue"; // 確保正確導入 computed
 import { ref } from "vue";
 
+const userLang = navigator.language || navigator.userLanguage; 
+console.log(userLang);
 // 定义一个响应式的 selectedLanguage，默认为 'en'
 const selectedLanguage = ref('en');
 
