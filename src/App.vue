@@ -127,8 +127,8 @@
         <!-- 多语言切换按钮 -->
         <div class="flex space-x-2">
             <button @click="setLanguage('en')" class="text-gray-400 hover:text-blue-600">EN</button>
-            <button @click="setLanguage('zh-cn')" class="text-gray-400 hover:text-blue-600">简</button>
-            <button @click="setLanguage('zh-tw')" class="text-gray-400 hover:text-blue-600">繁</button>
+            <button @click="setLanguage('zh-CN')" class="text-gray-400 hover:text-blue-600">简</button>
+            <button @click="setLanguage('zh-TW')" class="text-gray-400 hover:text-blue-600">繁</button>
         </div>
       </div>
       
@@ -192,13 +192,13 @@ import { ref } from "vue";
 const userLang = navigator.language || navigator.userLanguage; 
 console.log(userLang);
 // 定义一个响应式的 selectedLanguage，默认为 'en'
-const selectedLanguage = ref('en');
+const selectedLanguage = ref(userLang);
 
 // 语言数据对象
 const base_translations = {
   'en': BaseENJson,
-  'zh-cn': BaseCNJson,
-  'zh-tw': BaseTWJson
+  'zh-CN': BaseCNJson,
+  'zh-TW': BaseTWJson
 };
 
 
@@ -208,8 +208,8 @@ const currentBase = computed(() => {
 
 const job_translations = {
   'en': JobListENJson,
-  'zh-cn': JobListCNJson,
-  'zh-tw': JobListTWJson
+  'zh-CN': JobListCNJson,
+  'zh-TW': JobListTWJson
 };
 
 const currentJob = computed(() => {
@@ -218,8 +218,8 @@ const currentJob = computed(() => {
 
 const project_translations = {
   'en': ProjectListENJson,
-  'zh-cn': ProjectListCNJson,
-  'zh-tw': ProjectListTWJson
+  'zh-CN': ProjectListCNJson,
+  'zh-TW': ProjectListTWJson
 };
 
 const currentProject = computed(() => {
