@@ -189,9 +189,21 @@ import JobListENJson from "./assets/text/en/job_en.json";
 import { computed } from "vue"; // 確保正確導入 computed
 import { ref } from "vue";
 
-const userLang = navigator.language || navigator.userLanguage; 
+let userLang = navigator.language || navigator.userLanguage; 
 console.log(userLang);
 // 定义一个响应式的 selectedLanguage，默认为 'en'
+
+if (userLang.includes('TW') || userLang.includes('Hant')) {
+  // 如果語言代碼包含 'TW'，使用繁體中文
+  userLang = 'zh-TW';
+} else if (userLang.includes('CN') || userLang.includes('Hans')) {
+  // 如果語言代碼包含 'CN'，使用簡體中文
+  userLang = 'zh-CN';
+} else {
+  // 其他語言預設使用英文
+  userLang = 'en';
+}
+
 const selectedLanguage = ref(userLang);
 
 // 语言数据对象
