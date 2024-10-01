@@ -42,19 +42,19 @@
   <div v-if="isMenuOpen" class="fixed top-12 right-0 bg-gray-800 p-4 z-50">
     <nav class="flex flex-col space-y-4 text-right">
       <a href="#" class="nav-link text-white" @click="scrollToSection('about')"
-        >ABOUT</a
+        >{{currentBase.about}}</a
       >
       <a
         href="#"
         class="nav-link text-white"
         @click="scrollToSection('experience')"
-        >EXPERIENCE</a
+        >{{currentBase.experiences}}</a
       >
       <a
         href="#"
         class="nav-link text-white"
         @click="scrollToSection('projects')"
-        >PROJECTS</a
+        >{{currentBase.projects}}</a
       >
     </nav>
   </div>
@@ -81,13 +81,13 @@
         <div class="flex mt-4"></div>
         <nav class="hidden md:flex flex-col space-y-4 mt-5">
           <a href="#" class="nav-link" @click="scrollToSection('about')"
-            >ABOUT</a
+            >{{currentBase.about}}</a
           >
           <a href="#" class="nav-link" @click="scrollToSection('experience')"
-            >EXPERIENCE</a
+            >{{currentBase.experiences}}</a
           >
           <a href="#" class="nav-link" @click="scrollToSection('projects')"
-            >PROJECTS</a
+            >{{currentBase.projects}}</a
           >
         </nav>
       </div>

@@ -6,6 +6,9 @@
     "work": "伟盟系统股份有限公司",
     "experience": "总年资",
     "years":"年",
+    "about":"关于",
+    "experiences":"经验",
+    "projects":"项目",
     "skill": [
         "Flutter",
         "iOS",

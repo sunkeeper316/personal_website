@@ -6,6 +6,9 @@
     "work": "Wellan Systems Co., Ltd.",
     "experience": "Total years of experience",
     "years":"year",
+    "about":"ABOUT",
+    "experiences":"EXPERIENCE",
+    "projects":"PROJECTS",
     "skill": [
         "Flutter",
         "iOS",
